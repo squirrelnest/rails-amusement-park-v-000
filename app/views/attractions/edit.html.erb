@@ -1,0 +1,7 @@
+<%= form_for @attraction do |f| %>
+  <% @attraction.attributes.each do |key, value| %>
+    <%= f.label key %>
+    <%= f.text_field key, value: value %><br>
+  <% end %>
+  <%= f.submit 'Update Attraction' %>
+<% end %>
