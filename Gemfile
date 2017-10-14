@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 # ruby '2.2.0'
 
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2'
 # Use SCSS for stylesheets
@@ -50,7 +51,7 @@ group :test, :development do
 end
 
 group :production do
-  gem "pg"
+  # gem "pg"
   gem "google-analytics-rails"
   gem "rails_12factor"
 end

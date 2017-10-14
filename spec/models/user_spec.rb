@@ -44,6 +44,7 @@ RSpec.describe User, :type => :model do
     )
   }
 
+  # This test just checks that you're not requiring unnecessary user input
   it "is valid with a name, password, happiness, nausea, height, and tickets" do
     expect(user).to be_valid
   end

@@ -1,0 +1,11 @@
+<%= form_tag(controller: "sessions", action: "create", method: "post") do %>
+
+  <%= label_tag 'Name: ' %>
+  <%= text_field_tag 'user[name]' %><br>
+
+  <%= label_tag 'Password: ' %>
+  <%= text_field_tag 'user[password]' %><br>
+
+  <%= submit_tag 'Sign In' %>
+
+<% end %>

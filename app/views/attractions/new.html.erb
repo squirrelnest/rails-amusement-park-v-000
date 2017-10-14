@@ -1,0 +1,7 @@
+<%= form_for @attraction do |f| %>
+  <% @attraction.attributes.keys.reject{ |item| item == "id" }.each do |attribute| %>
+    <%= f.label attribute %>
+    <%= f.text_field attribute %><br>
+  <% end %>
+  <%= f.submit 'Create Attraction' %>
+<% end %>

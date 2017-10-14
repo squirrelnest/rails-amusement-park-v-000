@@ -1,0 +1,23 @@
+<div>
+  <% if current_user.admin %>
+    <%= link_to 'New Attraction', new_attraction_path %>
+  <% end %>
+</div>
+<br><br>
+
+<% @attractions.each do |a| %>
+  <p>
+    <% if !current_user.admin %>
+      <%= link_to "Go on #{a.name}", attraction_path(a) %><br>
+    <% else %>
+      <%= link_to 'See attractions', attraction_path(a) %><br>
+      <%= link_to "Show #{a.name}", attraction_path(a) %><br>
+    <% end %>
+    Tickets: <%= a.tickets %><br>
+    Nausea Rating: <%= a.nausea_rating %><br>
+    Happiness Rating: <%= a.happiness_rating %><br>
+    Minimum Height: <%= a.min_height %><br>
+  </p>
+
+
+<% end %>
